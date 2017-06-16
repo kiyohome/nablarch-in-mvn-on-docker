@@ -25,4 +25,5 @@ RUN mkdir root/work \
     && mvn clean package -s ~/settings.xml \
     && cd ../.. \
     && rm -r work/ \
-    && rm settings.xml
+    && rm settings.xml \
+    && find /usr/share/maven/ref/repository -name _remote.repositories | xargs rm
